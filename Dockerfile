@@ -1,6 +1,7 @@
 FROM ubuntu:14.04
 RUN DEBIAN_FRONTEND=noninteractive apt-get update -y \
     && apt-get install -y groff \
+            zip \
             unzip \
             apt-transport-https \
             build-essential \
@@ -26,4 +27,3 @@ VOLUME ["~/.aws"]
 CMD ["bash"]
 
 RUN echo "DONE"
-
