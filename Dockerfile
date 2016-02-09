@@ -24,6 +24,8 @@ RUN curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.
 
 VOLUME ["~/.aws"]
 
-CMD ["bash"]
+WORKDIR /app
+
+CMD ["aws"]
 
 RUN echo "DONE"
