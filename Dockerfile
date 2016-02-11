@@ -17,6 +17,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update -y \
     && rm -r /var/lib/apt/lists/* \
     && sed -i '1s/^/force_color_prompt=yes\n/' /root/.bashrc
 
+RUN curl -O https://bootstrap.pypa.io/get-pip.py && python get-pip.py && pip install aws-shell
 
 RUN curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip" \
     && unzip awscli-bundle.zip \
